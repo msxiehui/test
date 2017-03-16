@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>唯他可可</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, maximum-scale=1.0">
+   <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            position: relative;
+        }
+        canvas {
+            display: block;
+            position: absolute;
+            z-index: 9;
+            background-color: #3eaad4;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+/* 音乐 */
+.music{position:absolute;left:10px;top:0px;width:65px;height:32px;pointer-events:auto;z-index:1000;margin: 10px -24px 0 0}
+.music::before{content:' ';visibility:hidden;opacity:0;display:block;width:100%;height:100%;background:url(img/music.png) no-repeat 0 0;background-size:65px 32px;-webkit-transition:all .5s;}
+.music::after{content:' ';opacity:0.4;position:absolute;top:0;left:0;width:50%;height:100%;background:url(img/music.png) no-repeat left bottom;background-size:65px 32px;-webkit-transition:opacity .5s;}
+.music.on::after{background-position:right bottom;}
+
+
+@-webkit-keyframes animat {
+0%{
+-webkit-transform:translate3d(0, 0, 0);
+-ms-transform:translate3d(0, 0, 0);
+transform:translate3d(0, 0, 0)
+}
+50% {
+-webkit-transform:translate3d(0, -10px, 0);
+-ms-transform:translate3d(0, -10px, 0);
+transform:translate3d(0, -10px, 0)
+}
+
+100% {
+-webkit-transform:translate3d(0, -0px, 0);
+-ms-transform:translate3d(0, -0px, 0);
+transform:translate3d(0, -0px, 0)
+}
+}
+@keyframes animat {
+0%{
+-webkit-transform:translate3d(0, 0, 0);
+-ms-transform:translate3d(0, 0, 0);
+transform:translate3d(0, 0, 0)
+}
+50% {
+-webkit-transform:translate3d(0, -10px, 0);
+-ms-transform:translate3d(0, -10px, 0);
+transform:translate3d(0, -10px, 0)
+}
+
+100% {
+-webkit-transform:translate3d(0, -0px, 0);
+-ms-transform:translate3d(0, -0px, 0);
+transform:translate3d(0, -0px, 0)
+}
+}
+.animat {
+  -webkit-animation: animat 1.5s ease infinite;
+  animation: animat 1.5s ease infinite;
+}
+.jiantou{
+   position:absolute;
+   bottom:5%;
+   left:50%;
+   width:40px;
+   height:23px;
+   margin-left:-20px;
+   background:url("img/arrow.png") no-repeat;
+   background-size: cover;
+   opacity:.5;
+   z-index:99999;
+}
+
+    </style>
+</head>
+<body>
+	<div class="jiantou animat"> </div>
+<div class="music on" id="music"></div>
+<canvas id="game" width="640" height="1008"></canvas>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script src="js/easeljs-0.8.1.min.js"></script>
+<script src="js/tweenjs-0.6.1.min.js"></script>
+<script src="js/movieclip-0.8.1.min.js"></script>
+<script src="js/preloadjs-0.6.1.min.js"></script>
+<!--10.11 修改  keke21 为 keke22-->
+<script type="text/javascript" src="js/keke23.js" ></script>
+<script type="text/javascript" src="js/keke1.js" ></script>
+<script type="text/javascript" src="js/3-ke.js" ></script>
+
+<script type="text/javascript" src="js/12-ke_1.js?a=1" ></script>
+<script type="text/javascript" src="js/papp.js" ></script>
+
+<!--<script type="text/javascript" src="js/mykeke.js" ></script>-->
+<script src="js/main.js?v=003"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?16245e3f715057c6f10aca836be5badc";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>
